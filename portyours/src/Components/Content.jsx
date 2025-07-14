@@ -1,12 +1,16 @@
 import '../Styles/Content.css';
 import port1 from '../assets/port1.png';
 import port2 from '../assets/port2.png';
+import favicon from '../assets/favicon.png';
 
 export default function Content() {
   return (
     <section className="content">
       <div className="content-text">
-        <h1>Portyours</h1>
+        <div className="title">
+        <img src={favicon} alt="P" />
+        <h1>ortyours</h1>
+        </div>
         <p>
           Tired of digging through broken GitHub repos or confusing code just to make a portfolio?
           <br />

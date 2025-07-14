@@ -15,6 +15,20 @@
   color: #f4a300;
 }
 
+.title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 3remx;
+  font-weight: bold;
+  color: orange;
+  padding-left: 20px;
+}
+
+title img {
+  height : 5rem;
+} 
+
 .content-text p {
   font-size: 1.2rem;
   margin: 1rem 0;

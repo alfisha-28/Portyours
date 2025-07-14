@@ -1,0 +1,56 @@
+.footer {
+  background-color: #071229; /* dark navy blue */
+  padding: 1.5rem 2rem;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.left-text {
+  font-weight: 400;
+}
+
+.heart {
+  color: #ff5a5f;
+}
+
+.language-select {
+  background-color: #172b4d;
+  padding: 6px 12px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+}
+
+.social-icons svg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons svg:hover {
+  color: #ffb700;
+}
+
+.app-buttons img {
+  height: 35px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+

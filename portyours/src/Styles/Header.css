@@ -1,12 +1,12 @@
 .header {
   height: 90px;
-  background-color: #080808;
+  background-color: #071229;
   display: flex;
   font-family: "Cagliostro", sans-serif;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 10;
 }
