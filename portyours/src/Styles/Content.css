@@ -1,0 +1,54 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Cagliostro", sans-serif;
+  padding: 4rem;
+}
+
+.content-text {
+  max-width: 50%;
+}
+
+.content-text h1 {
+  font-size: 3rem;
+  color: #f4a300;
+}
+
+.content-text p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background-color: #f4a300;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 10px;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn.secondary {
+  background-color: #f7b733;
+  color: black;
+}
+
+.portfolio-image {
+    display: flex;
+    gap : 15px;
+
+}
+
+.portfolio-image img {
+  max-width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  border-radius: 20px;
+}

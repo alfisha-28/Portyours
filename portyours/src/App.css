@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #faf5e8; /* match your background */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&display=swap');
+
+.cagliostro-regular {
+  font-family: "Cagliostro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
