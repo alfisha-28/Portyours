@@ -1,4 +1,7 @@
 .footer {
+  width:100%;
+  bottom: 0;
+  /* position: fixed; */
   background-color: #071229; /* dark navy blue */
   padding: 1.5rem 2rem;
   color: #fff;

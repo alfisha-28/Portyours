@@ -7,10 +7,7 @@ export default function Content() {
   return (
     <section className="content">
       <div className="content-text">
-        <div className="title">
-        <img src={favicon} alt="P" />
-        <h1>ortyours</h1>
-        </div>
+        <h1>Portyours</h1>
         <p>
           Tired of digging through broken GitHub repos or confusing code just to make a portfolio?
           <br />

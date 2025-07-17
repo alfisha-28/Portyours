@@ -1,4 +1,5 @@
 .header {
+  top: 0;
   height: 90px;
   background-color: #071229;
   display: flex;
@@ -7,8 +8,9 @@
   align-items: center;
   padding: 0 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  position: relative;
+  position: fixed;
   z-index: 10;
+  width: 100%;
 }
 
 .logo {
@@ -16,18 +18,68 @@
   object-fit: contain;
 }
 
-.hamburger {
+/* .menu-icon {
   font-size: 28px;
-  color: #f4a300; /* matches Portyours brand color */
+  color: #f4a300; 
   cursor: pointer;
   display: flex;
   align-items: center;
+} */
+
+.menu-icon {
+  position: absolute;
+  right: 40px;
+  font-size: 26px;
+  color: #f4a300;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-/* Optional: Make hamburger disappear on large screens */
-/* @media screen and (min-width: 768px) {
-  .hamburger {
-    display: none;
-  }
-} */
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* hidden by default */
+  width: 250px;
+  height: 100vh;
+  background-color: #f4a300;
+  padding: 30px 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  z-index: 1100;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.close-icon {
+  font-size: 22px;
+  color: #000000;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-items li {
+  padding: 12px 0;
+  font-size: 18px;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.menu-items li:hover {
+  color: #6a1b1b;
+}
+
+
 

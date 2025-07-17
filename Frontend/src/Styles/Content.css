@@ -4,6 +4,7 @@
   align-items: center;
   font-family: "Cagliostro", sans-serif;
   padding: 4rem;
+  margin-top : 100px;
 }
 
 .content-text {
@@ -12,22 +13,8 @@
 
 .content-text h1 {
   font-size: 3rem;
-  color: #f4a300;
+  color: #ae7501;
 }
-
-.title {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 3remx;
-  font-weight: bold;
-  color: orange;
-  padding-left: 20px;
-}
-
-title img {
-  height : 5rem;
-} 
 
 .content-text p {
   font-size: 1.2rem;
@@ -40,7 +27,7 @@ title img {
 }
 
 .btn {
-  background-color: #f4a300;
+  background-color: #ffecb4;
   padding: 0.8rem 1.6rem;
   border: none;
   border-radius: 10px;
@@ -50,7 +37,7 @@ title img {
 }
 
 .btn.secondary {
-  background-color: #f7b733;
+  background-color: #ffecb4;
   color: black;
 }
 
