@@ -1,8 +1,8 @@
 import Header from '../Components/Header'
-import Content from '../Components/Content'
+import Content from '../Sections/Content'
 import Footer from '../Components/Footer'
 
-function LandingPage() {
+export default function LandingPage() {
   return (
     <>
            <Header/>
@@ -12,4 +12,3 @@ function LandingPage() {
   )
 }
 
-export default LandingPage

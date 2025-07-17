@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #ed9d1e;
+}
+.navbar {
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 9999;
+}
+
+.navlogo {
+    height: 50px;
+    background-color: orange;
+    width: 120px;
+}
+
+.navmenu {
+    color: #ed9d1e;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.form-container {
+  width: 800px;
+  max-width: 95vw;
+  margin: 110px auto 40px auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.form-container h1{
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+
+}
+@media (max-width: 450px) {
+  .form-container {
+    width: 95vw;
+    padding: 20px;
+    margin: 90px auto 40px auto;
+  }
+}
+
+.form-section {
+  padding: 10px 0 10px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.form-section h2 {
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+.input-box,
+.textarea-box {
+  width: 90%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #FFF3E0; 
+  font-size: 16px;
+  resize: none; 
+}
+
+.grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+.left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.profile-upload {
+  width: 150px;
+  height: 150px;
+  background-color:#ff9f04;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-upload:hover {
+  background-color: #ffe0b2;
+}
+
+.camera-icon {
+  font-size: 48px;
+  color: black;
+}
+.upload-text {
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+}
+
+.skills-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center;
+  margin: 10px 0 10px 0;
+} 
+
+.skill-icon {
+    font-size: 35px;
+    color: black;
+}
+
