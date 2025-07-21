@@ -1,28 +1,56 @@
-const {
-  findAllProjects,
-  findProjectById,
-  createProject,
-} = require("../models/portfolioModel");
+const Portfolio = require('../models/portfolioModel');
 
-const getAllProjects = (req, res) => {
-  const all = findAllProjects();
-  res.status(200).json(all);
+// Create
+exports.createPortfolio = async (req, res) => {
+  try {
+    const newProject = await Portfolio.create(req.body);
+    res.status(201).json(newProject);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
 };
 
-const getSingleProject = (req, res) => {
-  const one = findProjectById(req.params.id);
-  if (!one) return res.status(404).json({ message: "Not found" });
-  res.status(200).json(one);
+// Read All
+exports.getAllPortfolios = async (req, res) => {
+  try {
+    const portfolios = await Portfolio.find();
+    res.json(portfolios);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
-const createNewProject = (req, res) => {
-  const newItem = createProject(req.body);
-  res.status(201).json(newItem);
+// Read One
+exports.getPortfolioById = async (req, res) => {
+  try {
+    const portfolio = await Portfolio.findById(req.params.id);
+    if (!portfolio) return res.status(404).json({ error: 'Not found' });
+    res.json(portfolio);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };
 
-module.exports = {
-  getAllProjects,
-  getSingleProject,
-  createNewProject,
+// Update
+exports.updatePortfolio = async (req, res) => {
+  try {
+    const updated = await Portfolio.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true } // return the updated document
+    );
+    res.json(updated);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
 };
 
+// Delete
+exports.deletePortfolio = async (req, res) => {
+  try {
+    await Portfolio.findByIdAndDelete(req.params.id);
+    res.json({ message: 'Deleted successfully' });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
