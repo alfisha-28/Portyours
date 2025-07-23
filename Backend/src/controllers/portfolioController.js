@@ -1,4 +1,14 @@
 const Portfolio = require('../models/portfolioModel');
+const sendResponse = require('../utils/sendResponse');
+
+exports.getAllPortfolios = async (req, res, next) => {
+  try {
+    const data = await Portfolio.find();
+    sendResponse(res, 200, true, "All portfolios fetched", data);
+  } catch (err) {
+    next(err);
+  }
+};
 
 // Create
 exports.createPortfolio = async (req, res) => {
@@ -11,14 +21,14 @@ exports.createPortfolio = async (req, res) => {
 };
 
 // Read All
-exports.getAllPortfolios = async (req, res) => {
-  try {
-    const portfolios = await Portfolio.find();
-    res.json(portfolios);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
+// exports.getAllPortfolios = async (req, res) => {
+//   try {
+//     const portfolios = await Portfolio.find();
+//     res.json(portfolios);
+//   } catch (err) {
+//     res.status(500).json({ error: err.message });
+//   }
+// };
 
 // Read One
 exports.getPortfolioById = async (req, res) => {

@@ -1,18 +1,8 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
+const { createUser, getUser } = require('../controllers/userController');
 
-const users = [
-  { id: 1, name: "Yusu" },
-  { id: 2, name: "Elena" },
-];
+router.post('/', createUser);
+router.get('/', getUser);
 
-router.get("/", (req, res) => {
-  res.json(users);
-});
-
-router.get("/:id", (req, res) => {
-  const user = users.find((u) => u.id == req.params.id);
-  res.json(user || { error: "User not found" });
-});
-
-module.exports = router;
+module.exports = router; 

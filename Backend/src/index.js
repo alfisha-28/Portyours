@@ -1,21 +1,28 @@
 const express = require('express');
-const morgan = require('morgan');
+const cors = require('cors');
+const errorHandler = require('./middlewares/errorHandler');
+
 const app = express();
 
-const logger = require("./middlewares/logger");
 
+// Middleware
+app.use(cors());
 app.use(express.json());
-app.use(morgan('dev'));
-app.use(logger);
 
-const mainRoute = require("./routes/mainRoutes");
-const userRoute = require("./routes/userRoute");
-const portfolio = require("./routes/portfolioRoutes")
+// Routes
+// const mainRoutes = require('./routes/mainRoutes');
+const userRoutes = require('./routes/userRoute');
+const aboutRoutes = require('./routes/aboutRoute');
+const skillRoutes = require('./routes/skillRoute');
+// const portfolioRoutes = require('./routes/portfolioRoutes');
 
+// app.use('/api', mainRoutes);
+app.use('/user', userRoutes);
+app.use('/about', aboutRoutes); 
+app.use('/skills',skillRoutes);
+// app.use('/port', portfolioRoutes);
 
+// Error handling
+app.use(errorHandler);
 
-app.use("/api", mainRoute);
-app.use("/user", userRoute);
-app.use("/port", portfolio)
-
-module.exports = app;
+module.exports = app; // ✅ Export app

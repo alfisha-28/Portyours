@@ -6,7 +6,7 @@ connectDB();
 
 
 // const connectDB = require('./config/db');
-const app = require('./index');
+const app = require('./index'); 
 
 app.get("/", (req, res) => {
   res.send(`This is me from backend`);
