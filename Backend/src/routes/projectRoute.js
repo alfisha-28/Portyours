@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { createProject, getProjects } = require('../controllers/projectsController');
+const { createProject, getProjects } = require('../controllers/projectController');
 
 // POST => create a new project
 router.post('/', createProject);
